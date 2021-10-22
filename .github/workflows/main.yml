@@ -26,5 +26,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Check value 
-        run: check-value.sh
+        run: ./check-value.sh
         shell: bash
