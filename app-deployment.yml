@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-page-go
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: pipeline_test
+  template:
+    metadata:
+      labels:
+        app: pipeline_test
+    spec:
+      containers:
+        - name: pipeline_test
+          image: meffromkpi/pipeline_test
